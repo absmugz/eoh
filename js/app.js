@@ -1,4 +1,4 @@
-var eohApp = angular.module('eohApp', ['ngRoute']);
+var eohApp = angular.module('eohApp', ['ngRoute', 'swapi']);
 
 eohApp.config(['$routeProvider',
   function($routeProvider){
