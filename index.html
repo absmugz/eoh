@@ -1,12 +1,25 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="eohApp">
 <head>
   <meta charset="UTF-8">
   <title>Eoh Angular Test</title>
-  <script src="lib/angular/angular.min.js"></script>
+  
+   <!-- include AngualrJS js -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.min.js"></script>
+ 
+  <!-- our files -->
+  <script type="text/javascript" src="js/app.js"></script>
+ 
+  <!-- Controllers -->
+  <script type="text/javascript" src="controllers/main.js"></script>
+
+  <!-- styless 
+ <link rel="stylesheet" href="css/style.css">
+ -->
 </head>
 <body>
-  <input type="text" ng-model="name">
-  <h2>Welcome {{name}}</h2>
+
+ <div ng-view></div>
 </body>
 </html>
