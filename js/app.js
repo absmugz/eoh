@@ -1,13 +1,19 @@
-var eohApp = angular.module('eohApp', ['ngRoute', 'swapi']);
+var eohApp = angular.module('eohApp', ['ngRoute', 'swapi','xyz.angular.swapi']);
+
 
 eohApp.config(['$routeProvider',
   function($routeProvider){
-    $routeProvider
-    .when('/', {
+    $routeProvider.
+    when('/', {
       templateUrl : 'views/main.html',
-      controller : 'MainCtrl',
-      controllerAs : 'main'
-    })
-    .otherwise('/');
+      controller : 'MainCtrl'
+    }).
+	when('/details/:itemId', {
+      templateUrl : 'views/details.html',
+      controller : 'DetailsCtrl'
+    }).
+    otherwise('/');
   }
 ]);
+
+

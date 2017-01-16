@@ -1,16 +1,19 @@
+<h3>{{species}}</h3>
 
-  <div class="search">
+<div class="search">
     <h1>People Directory</h1>
     <label>search: </label>
     <input ng-model="query" placeholder="Search for person" autofocus>
 </div>
-<ul class="artistlist">
-    <li class="artist cf" ng-repeat="person in data | filter: query">
+<ul class="artistlist" ng-repeat="person in people">
+    <li class="artist cf" ng-repeat="item in person | filter: query">
       <!--<img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">-->
+       <a href="#/details/{{person.indexOf(item)}}">
       <div class="info">
-        <h2>{{person.name}}</h2>
-        <h3>{{person.species}}</h3>
+        <h2>{{item.name}}</h2>
+        <h3>{{item.species}}</h3>
 
       </div>
+      </a>
     </li>
   </ul>

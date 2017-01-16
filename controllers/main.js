@@ -1,14 +1,12 @@
-eohApp.controller('MainCtrl', [ 
-  '$scope',
-  'SwapiService',
-  function($scope, SwapiService){
-    $scope.heading = "Hello World";
-    $scope.message = "This is me";
- 
-    SwapiService.people()
-      .then(function(data) {
-        $scope.data = data.data.results;
-    }); 
- 
-  }
-]);
+eohApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
+   $http.get("http://swapi.co/api/people").then(function (response) {
+   	var data = response.data;
+    $scope.people = data;
+    console.log($scope.people);
+  });
+
+
+
+}]);
+
+
