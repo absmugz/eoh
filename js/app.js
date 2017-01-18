@@ -7,7 +7,7 @@ eohApp.config(['$routeProvider',
       templateUrl : 'views/main.html',
       controller : 'MainCtrl'
     }).
-	when('/details/:person', {
+  when('/details/:itemId', {
       templateUrl : 'views/details.html',
       controller : 'DetailsCtrl'
     }).
